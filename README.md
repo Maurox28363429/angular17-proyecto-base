@@ -1,5 +1,6 @@
-# Angularapp
 
+# Angularapp
+<img src="https://mau.phoenixtechsa.com/wp-content/uploads/2023/11/app.png" />
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
 ## Development server
