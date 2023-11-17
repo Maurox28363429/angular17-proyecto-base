@@ -1,0 +1,39 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div style="text-align:center;min-width:200px;">
+      <mat-icon style="zoom:1.8">account_circle</mat-icon>
+      <br>
+      Usuario admin
+    </div>
+    <mat-list role="list">
+      @for (navLink of navbarLink; track navbarLink) {
+        <mat-list-item role="listitem">
+          <a mat-button style="width:100%;display:flex;justify-content:left;" [href]="navLink.link">
+            <mat-icon fontIcon="link"></mat-icon>
+            {{navLink.name}}
+          </a>
+        </mat-list-item>
+      } @empty {
+        <mat-list-item role="listitem">
+          <button mat-button style="width:100%;">
+            No hay links
+          </button>
+        </mat-list-item>
+      }
+
+    </mat-list>
+  </mat-drawer>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>App Demo Angular 17</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</p>
+
+<!-- aqui se renderiza el contenido -->
+<ng-content></ng-content>
+
+</mat-drawer-container>
